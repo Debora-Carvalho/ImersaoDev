@@ -27,11 +27,16 @@ function pesquisar() {
         // Cria um novo elemento div para cada item, formatando-o como HTML
         resultados += `
           <div class="item-resultado">
-            <h2>
-              <a href="#" target="_blank">${dado.titulo}</a>
-            </h2>
-            <p class="descricao-meta">${dado.descricao}</p>
-            <a href=${dado.link} target="_blank">Mais informações</a>
+              <img src="${dado.imagem}" alt="Poster do dorama ${dado.titulo}">
+              <h2>
+                  <a href="#" target="_blank">${dado.titulo}</a>
+              </h2>
+              <p><strong>Gênero:</strong> ${dado.genero}</p>
+              <p><strong>Ano:</strong> ${dado.ano}</p>
+              <p><strong>Elenco principal:</strong> ${dado.elenco}</p>
+              <p><strong>Onde assistir:</strong> ${dado.streaming}</p>
+              <p class="descricao-meta">${dado.descricao}</p>
+              <a href=${dado.link} target="_blank">Mais informações</a>
           </div>
         `;
       };

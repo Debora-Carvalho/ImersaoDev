@@ -1,6 +1,11 @@
 let listDados = [
 {    
     titulo: "Rainha das Lágrimas",
+    imagem: 'https://example.com/imagens/poster_Rainha_das_Lagrimas.jpg',
+    genero: 'Drama',
+    ano: 2024,
+    elenco: ['Kim Tae-hee', 'Lee Byung-hun'],
+    streaming: 'Netflix',
     descricao: "Rainha das Lágrimas é um drama coreano que acompanha a história de um casal de magnatas, Hae-in e Hyun-woo, que se apaixonam na juventude e se casam. No entanto, com o passar dos anos, o casal enfrenta uma crise matrimonial profunda, enquanto navegam pelos desafios do mundo corporativo e das intrigas familiares. A série explora o amor, a traição e a busca pela felicidade em um ambiente de poder e riqueza.",
     link: "#",
     tags: "drama"
