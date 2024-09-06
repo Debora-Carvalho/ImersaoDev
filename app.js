@@ -5,16 +5,25 @@ function pesquisar() {
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
     if (campoPesquisa == "") {
-      section.innerHTML = "Nada foi encontrado. Digite uma palavra para iniciar a busca :)"
+      section.innerHTML = "<p>Nada foi encontrado. Digite uma palavra para iniciar a busca :)</p>"
       return
     };
+
+    //fazendo com que o campo pesquisa aceite palavras em minúsculo
+    campoPesquisa = campoPesquisa.toLowerCase();
   
     // Inicializa uma string vazia para armazenar os resultados da pesquisa
     let resultados = "";
+    let titulo = "";
+    let descricao = "";
+    let tags = "";
   
     // Itera sobre cada item da lista de dados
     for (let dado of listDados) {
-      if (dado.titulo.includes(campoPesquisa) || dado.descricao.includes(campoPesquisa)) {
+      titulo = dado.titulo.toLowerCase();
+      descricao = dado.descricao.toLowerCase();
+      tags = dado.tags.toLowerCase();
+      if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
         // Cria um novo elemento div para cada item, formatando-o como HTML
         resultados += `
           <div class="item-resultado">
@@ -27,6 +36,10 @@ function pesquisar() {
         `;
       };
     };
+
+    if (!resultados) {
+      resultados = "<p>Nada foi encontrado</p>"
+    }
   
     // Atribui a string com os resultados ao conteúdo HTML da seção
     section.innerHTML = resultados;
