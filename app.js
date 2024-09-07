@@ -43,7 +43,7 @@ function pesquisar() {
     };
 
     if (!resultados) {
-      resultados = "<p>Nada foi encontrado</p>"
+      resultados = "<p>Nada foi encontrado, tente uma nova busca :(</p>"
     }
   
     // Atribui a string com os resultados ao conteúdo HTML da seção
